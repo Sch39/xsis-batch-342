@@ -2,7 +2,8 @@ package LogicPhase.Exercises.Day01;
 
 public class Diff21 {
     public static int diff21(int n) {
-        return n < 21 ? 21 - n : (n - 21) * 2;
+        int absDiff = Math.abs(n - 21);
+        return n < 21 ? absDiff : absDiff * 2;
     }
 
     public static void main(String[] args) {
