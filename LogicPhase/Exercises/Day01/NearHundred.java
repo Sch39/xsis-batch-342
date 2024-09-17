@@ -1,4 +1,4 @@
-package LogicPhase.Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class NearHundred {
     private static boolean nearHundred(int n) {

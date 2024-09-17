@@ -1,4 +1,4 @@
-package Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class NotString {
     private static String notString(String str) {

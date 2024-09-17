@@ -1,4 +1,4 @@
-package Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class MissingChar {
     private static String missingChar(String str, int n) {

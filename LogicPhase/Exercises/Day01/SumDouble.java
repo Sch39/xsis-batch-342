@@ -1,4 +1,4 @@
-package LogicPhase.Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class SumDouble {
     public static int sumDouble(int a, int b) {

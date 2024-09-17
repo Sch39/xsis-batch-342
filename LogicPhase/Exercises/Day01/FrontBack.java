@@ -1,4 +1,4 @@
-package Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class FrontBack {
     private static String frontBack(String str) {

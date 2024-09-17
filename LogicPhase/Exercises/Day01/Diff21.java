@@ -1,4 +1,4 @@
-package LogicPhase.Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class Diff21 {
     public static int diff21(int n) {

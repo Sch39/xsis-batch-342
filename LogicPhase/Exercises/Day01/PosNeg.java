@@ -1,4 +1,4 @@
-package Exercises.Day01;
+package logicphase.exercises.day01;
 
 public class PosNeg {
     private static boolean posNeg(int a, int b, boolean negative) {
