@@ -1,6 +1,11 @@
 package logicphase.exercises.day02;
 
-public class GenerationFInder {
+public class GenerationFinder {
+  /**
+   * @param {Integer} year
+   * 
+   * @return {String}
+   */
   public static String getName(Integer year) {
     String name = "";
 

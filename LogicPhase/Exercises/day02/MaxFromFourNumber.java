@@ -1,6 +1,12 @@
 package logicphase.exercises.day02;
 
 public class MaxFromFourNumber {
+  /**
+   * Get min and max value from array
+   * 
+   * @param {int} num
+   * @return {String}
+   */
   public static String getMinMax(int[] num) {
     int min = num[0];
     int max = num[0];

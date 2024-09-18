@@ -2,10 +2,11 @@ package logicphase.exercises.day02;
 
 public class WeightClassification {
   /**
+   * Get weight category with BMI
    * 
-   * @param h (m)
-   * @param w (kg)
-   * @return String
+   * @param {float} h (m)
+   * @param {float} w (kg)
+   * @return {String}
    */
   public static String getWeightCategory(float h, float w) {
     float bmi = w / (h * h);
