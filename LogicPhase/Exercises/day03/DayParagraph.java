@@ -29,12 +29,10 @@ public class DayParagraph {
     };
 
     Boolean isValidDayName = false;
-    Integer currentDay = null;
 
     for (int i = 0; i < days.length; i++) {
       if (days[i] == dayName) {
         isValidDayName = true;
-        currentDay = i;
         break;
       }
     }
@@ -42,6 +40,7 @@ public class DayParagraph {
     if (!isValidDayName) {
       return null;
     }
+    Integer currentDay = DayNumber.getNumber(dayName) - 1;
 
     for (int i = 0; i < numberOperations.length; i++) {
       int index = currentDay + numberOperations[i];
@@ -54,7 +53,7 @@ public class DayParagraph {
         index = index + daysLen;
       }
 
-      paragraphs[i] = paragraphs[i] + days[index];
+      paragraphs[i] = paragraphs[i] + DayName.getName(index + 1);
     }
 
     return paragraphs;
