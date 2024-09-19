@@ -49,8 +49,8 @@ public class DayParagraph {
       if (index < 0) {
         index = daysLen + index;
       }
-      if (index > daysLen) {
-        index = index + daysLen;
+      if (index >= daysLen) {
+        index = index - daysLen;
       }
 
       paragraphs[i] = paragraphs[i] + DayName.getName(index + 1);
@@ -60,6 +60,6 @@ public class DayParagraph {
   }
 
   public static void main(String[] args) {
-    getPara("senin");
+    getPara("sabtu");
   }
 }
