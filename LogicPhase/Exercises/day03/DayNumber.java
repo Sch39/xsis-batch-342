@@ -36,7 +36,7 @@ public class DayNumber {
         break;
       }
 
-      System.out.println("Hari ke-: " + getNumber(input).toString());
+      System.out.println("Hari ke-: " + getNumber(input));
     }
 
     scanner.close();
