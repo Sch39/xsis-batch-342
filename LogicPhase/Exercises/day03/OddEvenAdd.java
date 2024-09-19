@@ -24,7 +24,7 @@ public class OddEvenAdd {
       System.out.println("Masukkan jumlah operasi hingga ke-n: ");
       Integer input = scanner.nextInt();
 
-      if (input.equals(-1)) {
+      if (input < 0) {
         System.out.println("Keluar program");
         break;
       }
