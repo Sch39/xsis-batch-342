@@ -18,6 +18,11 @@ public class DiagonalPattern {
   }
 
   public static void main(String[] args) {
-    getPattern(4);
+    for (String[] strs : getPattern(5)) {
+      for (String str : strs) {
+        System.out.print(str);
+      }
+      System.out.println();
+    }
   }
 }

@@ -14,7 +14,14 @@ public class DiagonalPatternTest {
         { " ", "*", " " },
         { "*", " ", "*" },
     };
+    String[][] expected2 = {
+        { "*", " ", " ", "*" },
+        { " ", "*", "*", " " },
+        { " ", "*", "*", " " },
+        { "*", " ", " ", "*" },
+    };
 
     assertArrayEquals(expected1, DiagonalPattern.getPattern(3));
+    assertArrayEquals(expected2, DiagonalPattern.getPattern(4));
   }
 }
