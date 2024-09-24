@@ -73,7 +73,11 @@ public class FoodPortion {
       System.out.println("Lanjutkan menginput data? [y: lanjut, c: hitung porsi, x: keluar program]");
       String selectedChoice = scanner.next();
 
-      persons.put(portionRation.get(personType), personCount);
+      if (persons.containsKey(portionRation.get(personType))) {
+        persons.put(portionRation.get(personType), persons.get(portionRation.get(personType)) + personCount);
+      } else {
+        persons.put(portionRation.get(personType), personCount);
+      }
 
       if (selectedChoice.equals("y")) {
         continue;
