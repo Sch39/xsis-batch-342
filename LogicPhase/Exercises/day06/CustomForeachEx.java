@@ -2,7 +2,7 @@ package logicphase.exercises.day06;
 
 import java.util.Arrays;
 
-public class CallbackImpl {
+public class CustomForeachEx {
   public static void main(String[] args) {
     CustomForeach customList = new CustomForeach(Arrays.asList("Apple", "Banana", "Orange"));
 
