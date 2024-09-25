@@ -1,5 +1,5 @@
 package selfpractice.synchronouscallback;
 
-public interface EventListener {
+public interface SynchronousEventListener {
   String onTrigger();
 }
