@@ -5,6 +5,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Scanner;
+import java.util.InputMismatchException;
 
 public class FoodPortion {
   public static Double getTotalPortion(Map<String, Integer> persons) {
@@ -59,19 +60,57 @@ public class FoodPortion {
     Map<String, Integer> persons = new HashMap<>();
     List<String> portionRation = new ArrayList<>(
         List.of("adult_man", "adult_female", "teenager", "children", "toddler"));
+    List<String> choiceList = new ArrayList<>() {
+      {
+        add("y");
+        add("c");
+        add("x");
+      }
+    };
 
     while (true) {
-      System.out.println("==== Pilih orang ====");
-      System.out.println("[0:adult_man, 1:adult_female, 2:teenager, 3:children, 4:toddler]=> ");
-      Integer personType = scanner.nextInt();
+      Integer personType;
+      while (true) {
+        System.out.println("==== Pilih orang ====");
+        System.out.println("[0:adult_man, 1:adult_female, 2:teenager, 3:children, 4:toddler]=> ");
+        try {
+          personType = scanner.nextInt();
+          break;
+        } catch (InputMismatchException e) {
+          System.out.println("Input tidak valid");
+          scanner.nextLine();
+          continue;
+        }
+      }
+
       if (personType >= portionRation.size()) {
         System.out.println("Pilihan tidak tersedia");
         continue;
       }
-      System.out.println("Masukan jumlah orang: ");
-      Integer personCount = scanner.nextInt();
-      System.out.println("Lanjutkan menginput data? [y: lanjut, c: hitung porsi, x: keluar program]");
-      String selectedChoice = scanner.next();
+      Integer personCount;
+      while (true) {
+        System.out.println("Masukan jumlah orang: ");
+        try {
+          personCount = scanner.nextInt();
+          break;
+        } catch (InputMismatchException e) {
+          System.out.println("Input tidak valid");
+          scanner.nextLine();
+          continue;
+        }
+      }
+
+      String selectedChoice;
+
+      while (true) {
+        System.out.println("Lanjutkan menginput data? [y: lanjut, c: hitung porsi, x: keluar program]");
+        selectedChoice = scanner.next().toLowerCase();
+        if (choiceList.contains(selectedChoice)) {
+          break;
+        }
+        System.out.println("Input tidak valid");
+        scanner.nextLine();
+      }
 
       if (persons.containsKey(portionRation.get(personType))) {
         persons.put(portionRation.get(personType), persons.get(portionRation.get(personType)) + personCount);
