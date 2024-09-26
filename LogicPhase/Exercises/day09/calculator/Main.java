@@ -18,7 +18,7 @@ public class Main {
           num1 = scanner.nextDouble();
           break;
         } catch (InputMismatchException e) {
-          System.out.println("Input tidak valid! Masukkan angka pertama lagi: ");
+          System.out.println("Input tidak valid!");
           scanner.nextLine();
         }
       }
@@ -32,7 +32,7 @@ public class Main {
           num2 = scanner.nextDouble();
           break;
         } catch (InputMismatchException e) {
-          System.out.println("Input tidak valid! Masukkan angka kedua lagi: ");
+          System.out.println("Input tidak valid!");
           scanner.nextLine();
         }
       }
