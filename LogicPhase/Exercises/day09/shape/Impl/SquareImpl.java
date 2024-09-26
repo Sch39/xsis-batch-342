@@ -11,7 +11,7 @@ public class SquareImpl extends Shape2DAbstract {
 
   @Override
   public Double getCircumference() {
-    return 2 * this.horizontalSide;
+    return 4 * this.horizontalSide;
   }
 
 }
