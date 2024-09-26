@@ -9,9 +9,8 @@ public class Main {
 
     while (true) {
       Integer num1 = typeCheck.checkInput(() -> {
-        System.out.println("Masukkan angka pertama: ");
         return scanner.nextInt();
-      }, "Input tidak valid!");
+      }, "Masukkan angka pertama: ", "Input tidak valid!");
 
       if (num1 < 0) {
         System.out.println("Keluar program!");
