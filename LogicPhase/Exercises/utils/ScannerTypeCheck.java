@@ -35,13 +35,16 @@ public class ScannerTypeCheck {
    *                             {@code callback}
    * @param callback             a {@link Callable} that represents the logic for
    *                             checking input
+   * @param inputIntruction      a custom message to display instruction
+   * 
    * @param customInvalidMessage a custom message to display when the input is
    *                             invalid
    * @return the valid input result produced by the {@code callback}
    * @throws Exception if the callback throws an exception that is not handled
    */
-  public <T> T checkInput(Callable<T> callback, String customInvalidMessage) {
+  public <T> T checkInput(Callable<T> callback, String inputIntruction, String customInvalidMessage) {
     while (true) {
+      System.out.println(inputIntruction);
       try {
         return callback.call();
       } catch (Exception e) {
