@@ -43,35 +43,28 @@ public class Main {
         try {
           selectedChoice = scanner.nextInt();
 
-          if (selectedChoice == 1
-              || selectedChoice == 2
-              || selectedChoice == 3
-              || selectedChoice == 4) {
-            switch (selectedChoice) {
-              case 1:
-                mathematicOperator.plus(num2);
-                break;
-              case 2:
-                mathematicOperator.sub(num2);
-                break;
-              case 3:
-                if (num2 == 0) {
-                  System.out.println("Error: Tidak dapat membagi dengan nol!");
-                } else {
-                  mathematicOperator.divide(num2);
-                }
-                break;
-              case 4:
-                mathematicOperator.mul(num2);
-                break;
+          if (selectedChoice == 1) {
+            mathematicOperator.plus(num2);
+            break;
+          } else if (selectedChoice == 2) {
+            mathematicOperator.sub(num2);
+            break;
+          } else if (selectedChoice == 3) {
+            if (num2 == 0) {
+              System.out.println("Error: Tidak dapat membagi dengan nol!");
+            } else {
+              mathematicOperator.divide(num2);
             }
+            break;
+          } else if (selectedChoice == 4) {
+            mathematicOperator.mul(num2);
+            break;
           } else if (selectedChoice == 5) {
             System.out.println("Menutup program");
             break outerloop;
           } else {
             System.out.println("Pilihan tidak valid! Pilih antara 1-5.");
           }
-          break;
 
         } catch (InputMismatchException e) {
           System.out.println("Input tidak valid! Masukkan pilihan operasi (1-5): ");
