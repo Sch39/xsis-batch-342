@@ -38,7 +38,7 @@ public class Main {
       String invalidMessage = "Harus berupa angka!";
 
       if (selectedChoice.equals(1)) {
-        SquareImpl squareImpl = new SquareImpl();
+        Shape2DAbstract squareImpl = new SquareImpl();
         Double sideLength = scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan Panjang Sisi: ", invalidMessage);
@@ -50,7 +50,7 @@ public class Main {
         System.out.println("Keliling: " + squareImpl.getCircumference());
         System.out.println("\n");
       } else if (selectedChoice.equals(2)) {
-        RectImpl rectImpl = new RectImpl();
+        Shape2DAbstract rectImpl = new RectImpl();
 
         rectImpl.setHorizontalSide(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
@@ -78,7 +78,7 @@ public class Main {
           }
           System.out.println("\nPilihan tidak tersedia!\n");
         }
-        TriangleImpl triangleImpl = new TriangleImpl(isSideSame);
+        Shape2DAbstract triangleImpl = new TriangleImpl(isSideSame);
         triangleImpl.setDiagonalSide(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan diagonalnya: ", invalidMessage));
@@ -93,7 +93,7 @@ public class Main {
         System.out.println("Keliling: " + triangleImpl.getCircumference());
         System.out.println("\n");
       } else if (selectedChoice.equals(4)) {
-        CircleImpl circleImpl = new CircleImpl();
+        Shape2DAbstract circleImpl = new CircleImpl();
         circleImpl.setRadius(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan jari-jari lingkaran: ", invalidMessage));
@@ -102,7 +102,7 @@ public class Main {
         System.out.println("Keliling: " + circleImpl.getCircumference());
         System.out.println("\n");
       } else if (selectedChoice.equals(5)) {
-        ParallelogramImpl parallelogramImpl = new ParallelogramImpl();
+        Shape2DAbstract parallelogramImpl = new ParallelogramImpl();
         parallelogramImpl.setVerticalSide(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan sisi vertikal: ", invalidMessage));
