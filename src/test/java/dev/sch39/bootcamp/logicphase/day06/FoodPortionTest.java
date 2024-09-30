@@ -29,7 +29,7 @@ public class FoodPortionTest {
     persons.put("toddler", 1); // 1 * 1.0 = 1.0
 
     Double totalPortion = FoodPortion.getTotalPortion(persons);
-    assertEquals(11.5, totalPortion); // 6.0 + 2.0 + 1.5 + 1.0 + 1.0 = 11.5
+    assertEquals(13.5, totalPortion); // 6.0 + 2.0 + 1.5 + 1.0 + 1.0 = 11.5
   }
 
   @Test

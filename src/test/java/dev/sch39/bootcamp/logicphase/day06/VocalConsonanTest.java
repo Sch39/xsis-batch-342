@@ -11,7 +11,7 @@ public class VocalConsonanTest {
   @Test
   public void testVocalConsonanSorted_SampleCase() {
     Map<String, String> result = VocalConsonan.getVocalConsonanSorted("Sample Case");
-    assertEquals("aae", result.get("vocal"));
+    assertEquals("aaee", result.get("vocal"));
     assertEquals("clmpss", result.get("consonan"));
   }
 
