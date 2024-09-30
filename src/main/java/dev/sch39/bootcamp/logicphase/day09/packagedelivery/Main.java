@@ -82,7 +82,7 @@ public class Main {
 
       System.out.println("Paket akan sampai pada hari " + estimatedDay
           + ", tanggal " + estimatedDayInMonth
-          + (estimatedMonthInYear > 0 ? " di bulan depan." : "."));
+          + (estimatedMonthInYear > 0 ? " bulan " + estimatedMonthInYear : "."));
 
       System.out.println("Apakah Anda ingin melakukan estimasi lain? (y/n):");
       String answer = scanner.next().toLowerCase();

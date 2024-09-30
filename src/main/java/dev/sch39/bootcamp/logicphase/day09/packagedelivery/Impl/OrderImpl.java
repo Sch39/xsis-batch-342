@@ -26,11 +26,11 @@ public class OrderImpl implements Order {
         this.orderedDayInWeek = 1;
       }
 
-      if (orderedDayInMonthTmp <= 31) {
+      if (orderedDayInMonthTmp < 31) {
         orderedDayInMonthTmp++;
       } else {
         diffMonth++;
-        orderedDayInMonthTmp = 0;
+        orderedDayInMonthTmp = 1;
       }
 
       diffDay++;
@@ -47,7 +47,8 @@ public class OrderImpl implements Order {
     Map<String, Integer> result = new HashMap<>();
     result.put("dayInWeek", this.orderedDayInWeek);
     result.put("dayInMonth",
-        (diffDay + this.orderedDayInMonth <= 31) ? diffDay : diffDay + this.orderedDayInMonth - 31);
+        (diffDay + this.orderedDayInMonth <= 31) ? diffDay + this.orderedDayInMonth
+            : diffDay + this.orderedDayInMonth - 31);
     result.put("monthInYear", diffMonth);
 
     return result;
