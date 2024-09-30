@@ -20,11 +20,12 @@ public class OrderImpl implements Order {
     int orderedDayInMonthTmp = this.orderedDayInMonth;
 
     while (workDayCounter <= 7) {
-      if (this.orderedDayInWeek <= 7) {
+      if (this.orderedDayInWeek < 7) {
         this.orderedDayInWeek++;
       } else {
         this.orderedDayInWeek = 1;
       }
+
       if (orderedDayInMonthTmp <= 31) {
         orderedDayInMonthTmp++;
       } else {
