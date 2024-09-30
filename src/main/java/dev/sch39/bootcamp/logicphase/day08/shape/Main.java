@@ -38,19 +38,18 @@ public class Main {
       String invalidMessage = "Harus berupa angka!";
 
       if (selectedChoice.equals(1)) {
-        Shape2DAbstract squareImpl = new SquareImpl();
+        SquareImpl squareImpl = new SquareImpl();
         Double sideLength = scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan Panjang Sisi: ", invalidMessage);
 
-        squareImpl.setHorizontalSide(sideLength);
-        squareImpl.setVerticalSide(sideLength);
+        squareImpl.setSide(sideLength);
 
         System.out.println("Luas: " + squareImpl.getArea());
         System.out.println("Keliling: " + squareImpl.getCircumference());
         System.out.println("\n");
       } else if (selectedChoice.equals(2)) {
-        Shape2DAbstract rectImpl = new RectImpl();
+        RectImpl rectImpl = new RectImpl();
 
         rectImpl.setHorizontalSide(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
@@ -78,7 +77,7 @@ public class Main {
           }
           System.out.println("\nPilihan tidak tersedia!\n");
         }
-        Shape2DAbstract triangleImpl = new TriangleImpl(isSideSame);
+        TriangleImpl triangleImpl = new TriangleImpl(isSideSame);
         triangleImpl.setDiagonalSide(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan diagonalnya: ", invalidMessage));
@@ -93,7 +92,7 @@ public class Main {
         System.out.println("Keliling: " + triangleImpl.getCircumference());
         System.out.println("\n");
       } else if (selectedChoice.equals(4)) {
-        Shape2DAbstract circleImpl = new CircleImpl();
+        CircleImpl circleImpl = new CircleImpl();
         circleImpl.setRadius(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan jari-jari lingkaran: ", invalidMessage));
@@ -102,7 +101,7 @@ public class Main {
         System.out.println("Keliling: " + circleImpl.getCircumference());
         System.out.println("\n");
       } else if (selectedChoice.equals(5)) {
-        Shape2DAbstract parallelogramImpl = new ParallelogramImpl();
+        ParallelogramImpl parallelogramImpl = new ParallelogramImpl();
         parallelogramImpl.setVerticalSide(scannerTypeCheck.checkInput(() -> {
           return scanner.nextDouble();
         }, "Masukan sisi vertikal: ", invalidMessage));

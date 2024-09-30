@@ -7,14 +7,12 @@ import org.junit.jupiter.api.Tag;
 import org.junit.jupiter.api.Tags;
 import org.junit.jupiter.api.Test;
 
-import dev.sch39.bootcamp.logicphase.day08.shape.Shape2DAbstract;
-
 @Tags({
     @Tag("day08"),
     @Tag("rect-impl")
 })
 public class RectImplTest {
-  private Shape2DAbstract shape;
+  private RectImpl shape;
 
   @BeforeEach
   void setUp() {

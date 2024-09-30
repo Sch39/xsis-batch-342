@@ -17,8 +17,7 @@ public class SquareImplTest {
   @BeforeEach
   public void setUp() {
     square = new SquareImpl();
-    square.setHorizontalSide(5.0);
-    square.setVerticalSide(5.0);
+    square.setSide(5.0);
     ;
   }
 

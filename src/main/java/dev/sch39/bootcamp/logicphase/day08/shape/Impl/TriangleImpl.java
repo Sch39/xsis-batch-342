@@ -9,6 +9,18 @@ public class TriangleImpl extends Shape2DAbstract {
     this.isSideSame = isSideSame;
   }
 
+  public void setHorizontalSide(Double value) {
+    this.horizontalSide = value;
+  }
+
+  public void setVerticalSide(Double value) {
+    this.verticalSide = value;
+  }
+
+  public void setDiagonalSide(Double value) {
+    this.diagonalSide = value;
+  }
+
   @Override
   public Double getArea() {
     return 0.5 * this.horizontalSide * this.verticalSide;
