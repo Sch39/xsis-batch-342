@@ -1,4 +1,4 @@
-CREATE VIEW student_detail AS
+CREATE OR REPLACE VIEW student_detail AS
 SELECT st.code,
   st.name,
   dp.name departmen_name,
@@ -12,5 +12,5 @@ FROM students st
   INNER JOIN lecturers le ON dp.code = le.department_code
   INNER JOIN lecturer_types lt ON le.lecturer_type_code = lt.code;
 SELECT *
-FROM student_detail
-WHERE st.code = 'M001';
+FROM student_detail std
+WHERE std.code = 'M001';
