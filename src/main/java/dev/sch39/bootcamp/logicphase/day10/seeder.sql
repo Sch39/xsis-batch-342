@@ -13,14 +13,14 @@ VALUES (
     'D001',
     'Prof. Dr. Retno Wahyuningsih',
     'J001',
-    'T001'
+    'T002'
   ),
   ('D002', 'Prof. Roy M. Sutikno', 'J002', 'T001'),
   (
     'D003',
     'Prof. Hendri A. Verburgh',
-    'J003',
-    'T002'
+    'J002',
+    'T001'
   ),
   ('D004', 'Prof. Risma Suparwata', 'J004', 'T002'),
   (
