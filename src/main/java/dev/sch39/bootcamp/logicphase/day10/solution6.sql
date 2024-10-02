@@ -1,6 +1,6 @@
 SELECT st.code,
   st.name,
-  COUNT(st.code) AS total_exam
+  COUNT(st.code) total_exam
 FROM students st
   INNER JOIN scores sc ON st.code = sc.student_code
 GROUP BY st.code,
