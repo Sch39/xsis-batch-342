@@ -1,19 +1,16 @@
 package dev.sch39.bootcamp.selfpractice.collections;
 
-import java.security.KeyStore.Entry;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Collection;
 import java.util.Collections;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
 public class CollectionEx {
   public static void main(String[] args) {
-    Collection<String> names = new ArrayList<>(List.of("a", "b", "c", "d"));
-    Iterator<String> iterator = names.iterator();
+    // Collection<String> names = new ArrayList<>(List.of("a", "b", "c", "d"));
+    // Iterator<String> iterator = names.iterator();
 
     // System.out.println("with iterator");
     // while (iterator.hasNext()) {
@@ -30,7 +27,7 @@ public class CollectionEx {
     // System.out.println("is contain z: " + names.contains("z"));
     // System.out.println(commonTwo(new String[] { "a", "c", "x" }, new String[] {
     // "b", "c", "d", "x" }));
-    String str = "fgdfd";
+    // String str = "fgdfd";
     // new StringBuilder(str).deleteCharAt(0).toString()
     List<String> names2 = new ArrayList<>(List.of("a", "b", "c", "d"));
     Integer[] arr = { 5, 2, 1, 8, 10 };
@@ -71,7 +68,7 @@ public class CollectionEx {
     int counter = 0;
     for (Map.Entry<String, Integer> set : prefixSum.entrySet()) {
       counter += set.getValue();
-      set.get
+      // set.get
     }
     System.out.println(prefixSum);
     return counter;
