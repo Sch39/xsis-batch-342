@@ -25,7 +25,7 @@
   </header>
 
   <div class="alert-container">
-    <div class="alert" id="alert">
+    <div class="alert" id="alertPopup">
       <span class="closebtn" onclick="this.parentElement.style.display='none';">&times;</span>
       Paman usman mengirim pesan!
     </div>
@@ -77,13 +77,13 @@
 
   <script>
     setInterval(() => {
-      let alert = document.getElementById('alert');
-      console.log(alert.style.display)
-      if (!alert.style.display
-        || alert.style.display == 'none') {
-        alert.style.display = 'inline-block';
-      } else if (alert.style.display == 'inline-block') {
-        alert.style.display = 'none';
+      // let alert = document.getElementById('alert');
+      console.log(alertPopup.style.display)
+      if (!alertPopup.style.display
+        || alertPopup.style.display == 'none') {
+        alertPopup.style.display = 'inline-block';
+      } else if (alertPopup.style.display == 'inline-block') {
+        alertPopup.style.display = 'none';
       }
     }, 3000);
   </script>
