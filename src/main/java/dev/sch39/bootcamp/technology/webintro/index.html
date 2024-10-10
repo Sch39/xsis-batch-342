@@ -76,14 +76,16 @@
   </footer>
 
   <script>
-    setTimeout(() => {
+    setInterval(() => {
       let alert = document.getElementById('alert');
       console.log(alert.style.display)
       if (!alert.style.display
         || alert.style.display == 'none') {
-        alert.style.display = 'inline-block'
+        alert.style.display = 'inline-block';
+      } else if (alert.style.display == 'inline-block') {
+        alert.style.display = 'none';
       }
-    }, 2000);
+    }, 3000);
   </script>
 </body>
 
