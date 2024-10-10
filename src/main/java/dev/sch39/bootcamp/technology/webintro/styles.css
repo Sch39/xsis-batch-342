@@ -1,0 +1,131 @@
+body {
+  background-color: #f0f4f8;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+}
+
+.head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0D0D0D;
+  padding: 15px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.head #logo img {
+  width: 50px;
+  border-radius: 50%;
+}
+
+.menu-container {
+  display: flex;
+}
+
+.menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu li {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+.menu li a {
+  text-decoration: none;
+  color: #BF9663;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 4px;
+}
+
+.menu li a:hover {
+  background-color: #401038;
+  color: white;
+}
+
+.hero-image {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("./assets/banner.jpeg");
+  height: 300px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-text {
+  color: white;
+  text-align: center;
+  font-size: 28px;
+}
+
+.hero-text p {
+  font-size: 18px;
+  margin-top: 8px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.biodata-container,
+#hoby {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px auto;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.biodata-container h2,
+#hoby h2 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.biodata-container p,
+#hoby p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+li strong {
+  color: #333;
+}
+
+.footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer-content {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.footer-content p {
+  font-size: 14px;
+  margin: 0;
+}
