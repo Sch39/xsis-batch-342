@@ -59,7 +59,7 @@ document.getElementById('inputSkill')
     const commaIndex = e.target.value.indexOf(",");
     const skillVal = e.target.value.substring(0, commaIndex);
     if (!skillArr.includes(skillVal)) {
-      watchedSkills.push(skillVal);
+      watchedSkills.push(skillVal.trim());
       e.target.value='';
     }
   }
