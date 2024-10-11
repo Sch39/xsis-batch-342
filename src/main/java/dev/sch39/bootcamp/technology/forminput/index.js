@@ -22,6 +22,7 @@ submitButton.addEventListener('click', (e)=>{
   data.append('birth_place', birthplace.value);
   data.append('bod', bod.value);
   data.append('about_me', aboutMe.value);
+  data.append('skills', skillArr);
 
   modalDialog.showModal();
   let biodataModal = document.getElementById('biodata');
@@ -34,4 +35,55 @@ submitButton.addEventListener('click', (e)=>{
   });
 });
 
+let skillArr = [];
+const watchedSkills = new Proxy(
+  skillArr,
+  {
+    set(target, property, value, receiver){
+      target[property] = value;
+      renderSkillBadge(target);
+      return true;
+    },
+    deleteProperty(target, property){
+      delete target[property];
 
+      renderSkillBadge(target);
+      return true;
+    },
+  }
+)
+
+document.getElementById('inputSkill')
+.addEventListener('input', (e)=>{
+  if (e.target.value.includes(",")) {
+    const commaIndex = e.target.value.indexOf(",");
+    const skillVal = e.target.value.substring(0, commaIndex);
+    if (!skillArr.includes(skillVal)) {
+      watchedSkills.push(skillVal);
+      e.target.value='';
+    }
+  }
+});
+
+const renderSkillBadge = (arr)=>{
+  const container = document.getElementById('skillBadge');
+  container.innerHTML='';
+  
+  arr.forEach((item, index) => {
+    const badge = document.createElement('div');
+    badge.classList.add('badge'); 
+    badge.textContent = item;
+
+    const closeBtn = document.createElement('span');
+    closeBtn.classList.add('close-btn'); 
+    closeBtn.textContent = '✕';
+
+    closeBtn.addEventListener('click', () => {
+     delete watchedSkills[index];
+    });
+
+    badge.appendChild(closeBtn);
+
+    container.appendChild(badge);
+  });
+}
