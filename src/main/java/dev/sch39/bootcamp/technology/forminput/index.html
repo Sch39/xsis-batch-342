@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Input Form</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+  <header class="container">
+    <h1>Biodata Form</h1>
+  </header>
+
+  <dialog id="modalDialog">
+    <h3>Berikut data yang anda masukkan</h3>
+    <div id="biodata"></div>
+    <button onclick="modalDialog.close();" aria-label="close" class="x">❌</button>
+  </dialog>
+
+  <main>
+    <section class="form-container">
+      <form class="form">
+        <label>
+          <p>Nama:</p>
+          <input type="text" name="name" id="name" placeholder="Masukkan nama">
+        </label>
+        <label>
+          <p>Tempat lahir:</p>
+          <input type="text" name="birthplace" id="birthplace" placeholder="Masukkan tempat lahir">
+        </label>
+        <label>
+          <p>Tanggal lahir:</p>
+          <input type="date" name="bod" id="bod">
+        </label>
+
+        <h3>Status Pernikahan</h3>
+        <select name="marriageState" id="marriageState" class="form-field">
+          <option value="lajang" selected>Lajang</option>
+          <option value="duda">Duda</option>
+          <option value="janda">Janda</option>
+        </select>
+
+        <h3>Pilih Hobi</h3>
+        <div class="hoby">
+          <input type="checkbox" name="hoby" id="anime" value="watch anime">
+          <label for="anime">Menonton anime</label>
+          <input type="checkbox" name="hoby" id="sleep" value="sleep">
+          <label for="sleep">Tidur</label>
+          <input type="checkbox" name="hoby" id="eat" value="eat">
+          <label for="eat">Makan</label>
+        </div>
+
+        <h3>Pilih Gender</h3>
+        <div class="gender">
+          <input type="radio" name="gender" id="male" value="male">
+          <label for="male">Laki-laki</label>
+          <input type="radio" name="gender" id="female" value="female">
+          <label for="female">Perempuan</label>
+          <input type="radio" name="gender" id="optional" value="optional">
+          <label for="optional">Memilih tidak menjawab</label>
+        </div>
+
+        <label>
+          <p>Tentang saya:</p>
+          <textarea name="about-me" id="aboutMe" placeholder="Tulis tentang dirimu"></textarea>
+        </label>
+
+        <div class="form-group">
+          <button class="btn-submit" id="submitButton" type="submit">Submit</button>
+        </div>
+      </form>
+    </section>
+  </main>
+
+  <script src="./index.js"></script>
+</body>
+
+</html>
