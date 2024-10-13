@@ -1,3 +1,4 @@
+// @ts-nocheck
 submitButton.addEventListener('click', (e)=>{
   e.preventDefault();
   let data = new FormData();
@@ -45,11 +46,17 @@ const watchedSkills = new Proxy(
       return true;
     },
     deleteProperty(target, property){
-      delete target[property];
+      // delete target[property];
+      let idx = parseInt(property);
+      
+      if (idx>=0) {
+        target.splice(idx, 1);
+      }
 
       renderSkillBadge(target);
       return true;
     },
+
   }
 )
 
@@ -79,7 +86,8 @@ const renderSkillBadge = (arr)=>{
     closeBtn.textContent = '✕';
 
     closeBtn.addEventListener('click', () => {
-     delete watchedSkills[index];
+    //  delete watchedSkills[index];
+    Reflect.deleteProperty(watchedSkills, index);
     });
 
     badge.appendChild(closeBtn);
